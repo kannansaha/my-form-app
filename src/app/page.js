@@ -7,7 +7,6 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
          <h1>hello NextJs</h1>
          <Link href="/contact">contact</Link>
-         <Link href="/submitted">submitted</Link>
 
          </main>
   );

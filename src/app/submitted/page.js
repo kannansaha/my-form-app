@@ -13,7 +13,7 @@ export default function Submitted() {
 
 
   return (
-    <Suspense>
+    <Suspense  fallback={<div>Loading...</div>}>
     <div className='Submitted-data'>
       <h1>Submitted Data</h1>
       <p>Name: {name}</p>
