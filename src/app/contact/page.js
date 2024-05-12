@@ -6,7 +6,7 @@ import './contact.css';
 
 export default function Contact() {
   const router = useRouter();
-  const [formData, setFormData] = useState({
+  let [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
@@ -22,7 +22,7 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
    e.preventDefault();
-    router.push(`/submitted/${[formData]}?formData=${setFormData}`);
+    router.push(`/submitted/?name=${formData.name}&email=${formData.email}&message=${formData.message}`);
   };
 
   return (
