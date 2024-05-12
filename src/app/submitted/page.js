@@ -1,19 +1,16 @@
 "use client"
-import React from "react";
-
-import { useRouter } from 'next/router';
+import { useSearchParams} from 'next/navigation';
 
 export default function Submitted() {
-  const router = useRouter();
-  const { name, email, message } = router.query;
+  const searchParams = useSearchParams();
+  const {name,email,message}  =searchParams.get("formData");
 
   return (
     <div>
-       <h1>Submitted Data</h1>
+      <h1>Submitted Data</h1>
       <p>Name: {name}</p>
       <p>Email: {email}</p>
-      <p>Message: {message}</p> 
-
+      <p>Message: {message}</p>
     </div>
   );
 }
