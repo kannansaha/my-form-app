@@ -1,0 +1,30 @@
+.forms{
+    margin: 25px;
+    padding: 20px;
+    background-color: aliceblue;
+
+}
+
+input[type="text"]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 10px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+button[type="submit"]{
+    width: 100%;
+    background-color: #4caf50;
+    color:aliceblue;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 8px 0;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover{
+    background-color: #45a049;
+}
