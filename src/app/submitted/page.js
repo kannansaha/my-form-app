@@ -1,4 +1,6 @@
 "use client"
+import { Suspense } from 'react';
+//import { useSearchParams } from 'your-search-params-package';
 import { useSearchParams} from 'next/navigation';
 import "./submitted.css";
 
@@ -11,11 +13,13 @@ export default function Submitted() {
 
 
   return (
+    <Suspense>
     <div className='Submitted-data'>
       <h1>Submitted Data</h1>
       <p>Name: {name}</p>
       <p>Email: {email}</p>
       <p>Message: {message}</p>
     </div>
+    </Suspense>
   );
 }
