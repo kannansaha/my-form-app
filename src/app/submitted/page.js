@@ -1,5 +1,5 @@
 "use client"
-import { Suspense} from "react";
+import { Suspense} from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import "./submitted.css";
 
@@ -10,6 +10,7 @@ export default function Submitted() {
   // const message =searchParams.get("message");
 
   return (
+    <div>
     <Suspense  fallback={<div>Loading...</div>}>
     <div className='Submitted-data'>
       <h1>Submitted Data</h1>
@@ -18,5 +19,6 @@ export default function Submitted() {
       <p>Message: {searchParams.get("message")}</p>
     </div>
     </Suspense>
+    </div>
   );
 }
