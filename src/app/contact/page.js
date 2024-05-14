@@ -1,6 +1,6 @@
 // pages/contact.js
 "use client"
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import './contact.css';
 
@@ -26,6 +26,7 @@ export default function Contact() {
   };
 
   return (
+    <Suspense>
     <div className='forms'>
       <h1>Contact Form</h1>
       <form onSubmit={handleSubmit}>
@@ -68,5 +69,6 @@ export default function Contact() {
         <button type="submit">Submit</button>
       </form>
     </div>
+    </Suspense>
   );
 }
